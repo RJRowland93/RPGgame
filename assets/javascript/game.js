@@ -1,45 +1,75 @@
 //============================================
-			//DOM
-//============================================
-	//***theme***
-//character selection
-	//hover over stats
-		//--CSS property :hover
-//win/lose counter
-//chosen character //enemy character
-	//***animation on click?
-//display info section
-	//damage done, damage taken, health left
-//attack button	//reset button
-//============================================
 			//Javascript
 //============================================
 	//global variables
 //============================================
 //character objects 
-	//name, AP (doubles every turn), HP, defense, chosen/enemy(true/false)
+	//name, AP (if hero, doubles every turn), HP, defense, ***hero/enemy(true/false)
+var characters = {
+	1: {
+		name: Rick
+		HP: 
+		AP: 
+		defense: 
+	},
+	2: {
+		name: Meatball
+		HP: 
+		AP: 
+		defense:
+	},
+	3: {
+		name: Peter Griffin
+		HP: 
+		AP: 
+		defense:
+	},
+	4: {
+		name: Zoidberg
+		HP: 
+		AP: 
+		defense: 
+	}
+};
 //win count
+var winCount: 0;
 //lose count
-//chosen character
+var loseCount: 0;
+//hero character
+
 //enemy character
 //============================================
 	//functions
 //============================================
 //game start
-	//player character and opponent selected
+	//hero character and enemy selected
 //game reset
 	//dont reset win/lose count
 	//reset character selection and health
 //attack
-	//player deals damage to enemys hp
-	//player recieves defense damage
+function attack(){
+	//hero deals damage to enemys hp
+	enemyHP - 
+	//hero recieves defense damage
+	//if health <=0 add class display:none
+	//double heros AP
+};
+
 //win condition
 	//all enemies defeated health <= 0
 	//show congrats
 //lose condition
-	//chosen character health <=0
+	//hero character health <=0
 	//show game over
 //============================================
 	//logic
 //============================================
 //game start
+//choose hero
+	//remove from char selection
+	//goes to hero section
+//choose enemy
+	//remove from char selection
+	//goes to enemy section
+//attack button only enabled if both hero and enemy selected
+//run win/lose conditions on each attack click
