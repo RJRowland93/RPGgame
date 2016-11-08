@@ -6,6 +6,9 @@
 	<!-- Bootstrap CDN -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<!-- Bootstrap Theme -->
+
+	<link rel="stylesheet" href="assets/css/reset.css">
+	<link rel="stylesheet" href="assets/css/style.css">
 	<!-- Google Fonts -->
 	<!-- jQuery CDN -->
 	<script src="https://code.jquery.com/jquery.js"></script>
@@ -13,43 +16,64 @@
 </head>
 <body>
 <!-- Wrapper -->
-<div class="wrapper">
-	<!-- Header -->
-<div class="row">
-	<!-- Instructions -->
-Select a character to battle against the other three!
-Your character will grow stronger every turn.
-Defeat all three enemies before your health runs out to win the game!
-</div>
-<!-- //Win/Lose counter -->
-<div class="row">
-	<div class="col-xs-6" id="wins"></div>
-	<div class="col-xs-6" id="losses"></div>
-</div>
-<!-- //Character selection -->
-<div class="row">
-	<!-- //hover over stats -->
-		<!-- //CSS property :hover -->
-	<div class="col-xs-12" id="selectScreen"></div>
-</div>
-<!-- //Hero/Enemy -->
-<div class="row">
-	<div class="col-xs-6" id="hero"></div>
-	<div class="col-xs-6" id="enemy"></div>
-</div>
-	<!-- //***animation on click? -->
-<!-- //Display Info Section -->
-<div class="row">
-<!-- //Damage done, Damage taken, Health left -->
-	<div class="col-xs-12" id="combatLog"></div>
-</div>
-<!-- Sticky Footer -->
-<div class="push"></div>
-</div>
+	<div class="wrapper">
+		<!-- Header -->
+		<div class="jumbotron jumbotron-fluid">
+		  	<div class="container">
+		  <!-- Instructions -->
+			    <h1 class="display-3">Adult Swim RPG Game</h1>
+			    <p class="lead">Select a character to battle against the other three!</p>
+			    <p>Your character will grow stronger every turn.</p>
+			    <p>Defeat all three enemies before your health runs out to win the game!</p>
+		  	</div>
+		</div>
+		<!-- //Character selection -->
+		<div class="row" id="selectScreen">
+		<!-- //hover over stats -->
+				<!-- //CSS property :hover -->
+			  <div class="col-xs-3 character meatwad">
+			      <img src="assets/images/meatwad.jpg" alt="Meatwad">
+			  </div>
+			    <div class="col-xs-3 character peter">
+			      <img src="assets/images/peter.jpg" alt="Peter Griffin">
+			  </div>
+			    <div class="col-xs-3 character rick">   
+			      <img src="assets/images/rick.jpg" alt="Rick">				    
+			  </div>
+			    <div class="col-xs-3 character zoidberg">
+			      <img src="assets/images/zoidberg.jpg" alt="Dr. Zoidberg">
+			  </div>
+		</div>
+	<!-- //Win/Lose counter -->
+		<div class="row">
+			<div class="col-xs-3" id="wins"></div>
+			<div class="col-xs-3"></div>
+			<div class="col-xs-3"></div>
+			<div class="col-xs-3" id="losses"></div>
+		</div>
+	<!-- //Hero/Enemy -->
+		<div class="row">
+			<div id="hero"></div>
+			<div id="enemy"></div>
+		</div>
+		<!-- //***animation on click? -->
+			<!-- Attack/Reset -->
+		<div class="row">
+			<button type="button" class="btn btn-danger" id="attack">Attack</button>
+			<button type="button" class="btn btn-success" id="reset">Reset</button>
+		</div>
+		<!-- //Display Info Section -->
+		<div class="row">
+	<!-- //Damage done, Damage taken, Health left -->
+			<div class="col-xs-12" id="combatLog"></div>
+		</div>
+	<!-- Sticky Footer -->
+		<div class="push"></div>
+	</div>	
 <!-- Footer -->
-<div class="footer">
-	<p>Randal Rowland &copy; 2016</p>
-</div>
-
+	<div class="footer text-center">
+		<p>Randal Rowland &copy; 2016</p>
+	</div>
+	<script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>

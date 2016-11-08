@@ -1,0 +1,33 @@
+/*Stick Footer*/
+/*=====================================*/
+html, body {
+    height: 100%;
+    background: black;
+}
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -50px;
+}
+.footer, .push {
+    height: 50px; 
+}
+/*=====================================*/
+.defeated {
+	display: none;
+}
+
+img {
+	max-width: 200px;
+	max-height: 200px;
+}
+
+h1, h2, p {
+	font: 32px/150% "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	color: white;
+}
+
+h2, p {
+	font: 24px;
+}
