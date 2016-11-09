@@ -8,26 +8,79 @@ html, body {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    margin: 0 auto -50px;
+    margin: 0 auto -30px;
 }
 .footer, .push {
-    height: 50px; 
+    height: 30px; 
 }
 /*=====================================*/
 .defeated {
 	display: none;
 }
-
 img {
+	position: relative;
 	max-width: 200px;
 	max-height: 200px;
+	border-radius: 10px;
+	margin: 0 auto;
 }
-
-h1, h2, p {
+h1 {
 	font: 32px/150% "Helvetica Neue", "Helvetica", Arial, sans-serif;
 	color: white;
 }
-
 h2, p {
-	font: 24px;
+	font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	color: white;
+	font-size: : 16px;
 }
+.jumbotron {
+	background-color: black;
+}
+/*Character Picture Data*/
+/*=====================================*/
+span{
+	font-family: "Helvetica Neue", "Helvetica", Arial, sans-serif;
+	color: white;
+	font-size: : 16px;
+	background-color: black;
+	border: 2px solid red; 
+	border-radius: 5px;
+}
+.character{
+	position: relative;
+}
+.topLeft{
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 2;
+}
+.topRight{
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+}
+.botLeft{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	z-index: 2;
+}
+.botRight{
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	z-index: 2;
+}
+.thumbnail {position: relative;
+	overflow: auto;	
+	border: 5px solid red;
+}
+.thumbnail img {
+    height:250px;
+    width:100%;
+}
+/*=====================================*/
+
+
