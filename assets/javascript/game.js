@@ -4,42 +4,40 @@
 	//global variables
 //============================================
 //character objects 
-	//name, AP (if hero, doubles every turn), HP, defense
+	//name, HP, AP, defense
 var characters = {
 	rick: {
 		name: "Rick",
-		HP: 100,
-		AP: 5,
-		def: 5,
-		pic: 0
+		HP: 125,
+		AP: 20,
+		def: 20,
 	},
 	meatwad: {
 		name: "Meatwad",
-		HP: 100,
-		AP: 10,
+		HP: 200,
+		AP: 8,
 		def:10
 	},
 	peter: {
 		name: "Peter Griffin",
-		HP: 200,
-		AP: 2,
-		def: 4
+		HP: 150,
+		AP: 12,
+		def: 15
 	},
 	zoidberg: {
 		name: "Zoidberg",
-		HP: 300,
-		AP: 3,
-		def: 5
+		HP: 175,
+		AP: 15,
+		def: 12
 	}
 };
 
 var winCount = 0;
 var loseCount = 0;
 var defeated = 0;
-var charsLeft = 4;
-var charsSelected = 0;
 var heroChosen = false;
 var enemyChosen = false;
+var gameRun = true;
 var heroAP;
 var heroHP;
 var enemyHP;
@@ -57,11 +55,10 @@ function reset(){
 defeated = 0;
 heroChosen = false;
 enemyChosen = false;
+gameRun = true;
 heroAP;
 grindAP;
 heroHP;
-heroDef;
-enemyAP;
 enemyHP;
 enemyDef;
 	})
@@ -75,6 +72,7 @@ function gameOver(){
 	winCount++;
 	$("#info").html("<p>Congratulations! You have defeated all of the enemies. You are victorious!</p>");
 	$("#wins").text(winCount);
+	gameRun = false;
 	}
 //lose condition
 	//hero character health <=0
@@ -83,6 +81,7 @@ function gameOver(){
 	loseCount++;
 	$("#info").html("<p>Defeat has befallen you! You have failed...</p>");
 	$("#losses").text(loseCount);
+	gameRun = false;
 	}
 }; 
 
@@ -144,7 +143,8 @@ $(".character").on("dblclick", function() {
 
 //attack rounds
 $("#attack").on("click", function() {
-if (heroChosen && enemyChosen){
+if (gameRun){
+	if (heroChosen && enemyChosen){
 	//hero deals damage to enemys hp
 	enemyHP -= heroAP;
 	//hero recieves defense damage
@@ -171,6 +171,7 @@ if (heroChosen && enemyChosen){
 		console.log(enemyDef);
 	};
 	gameOver();
+};
 });
 //reset button
 	$("#reset").on("click", reset);
